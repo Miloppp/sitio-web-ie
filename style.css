@@ -8,7 +8,7 @@
 html, body { /* Estilos para el html y el body */
     margin: 0; /* Elimina el margen por defecto */
     padding: 0; /* Elimina el padding por defecto */
-    background-color: #d0d6f9; /* Fondo claro */
+    background-color: #ffffff; /* Fondo claro */
 }
 
 main { /* Estilo para el elemento main */
@@ -38,7 +38,7 @@ main { /* Estilo para el elemento main */
 h1 { /* Estilo para el título h1 */
     font-size: 4em; /* Tamaño de fuente grande (4em) */
     font-weight: bold; /* Fuente en negrita */
-    color: #284178; /* Color naranja */
+    color: #000000; /* Color naranja */
 }
 
 h2 { /* Estilo para subtítulos h2 */
@@ -92,10 +92,10 @@ p { /* Estilo para párrafos p */
 button { /* Estilo para los botones */
     border-radius: 20px; /* Bordes redondeados */
     padding: 10px 20px; /* Padding de 10px arriba y abajo, 20px a los lados */
-    background-color: rgb(230, 230, 230); /* Color de fondo gris claro */
+    background-color: rgb(170, 169, 216); /* Color de fondo gris claro */
     font-size: 14px; /* Tamaño de fuente de 14px */
     font-weight: bold; /* Texto en negrita */
-    color: #4c4fa4; /* Texto naranja */
+    color: #010221; /* Texto naranja */
     border: none; /* Sin borde */
     cursor: pointer; /* Cursor de mano al pasar por encima */
 }
