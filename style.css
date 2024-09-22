@@ -9,8 +9,9 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: #ffffff;
+  background: radial-gradient(circle, #ffffff 85%, rgb(170, 169, 216) 90%);
 }
+
 
 body {
   display: flex;
@@ -33,6 +34,12 @@ main {
 .title {
   margin-bottom: 20px; /* Espacio debajo del título */
 }
+ 
+.title h1 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: #2b2d42;
+}
+
 
 .content {
   margin-bottom: 20px; /* Espacio debajo del contenido */
@@ -87,6 +94,7 @@ button:hover {
   background-color: #F8417805;
   color: black;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 @media (max-width: 1200px) {
