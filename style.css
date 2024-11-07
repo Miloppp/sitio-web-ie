@@ -12,7 +12,6 @@ html, body {
   background: radial-gradient(circle, #ffffff 85%, rgb(170, 169, 216) 90%);
 }
 
-
 body {
   display: flex;
   flex-direction: column;
@@ -27,58 +26,78 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1000px; /* Ajusta el ancho máximo para grandes pantallas */
-  padding: 0 10px; /* Espacio lateral */
+  max-width: 1000px;
+  padding: 0 10px;
 }
 
 .title {
-  margin-bottom: 20px; /* Espacio debajo del título */
+  margin-bottom: 20px;
 }
- 
+
 .title h1 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   color: #2b2d42;
 }
 
-
 .content {
-  margin-bottom: 20px; /* Espacio debajo del contenido */
+  margin-bottom: 20px;
 }
 
-.proyectos {
-  display: flex;
-  justify-content: center; 
-  flex-wrap: wrap;
-  gap: 30px;
+/* Configuración de la galería de imágenes */
+.imagen-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en la primera fila */
+  gap: 20px;
+  justify-content: center;
   width: 100%;
-  max-width: 1000px; /* Ajusta el ancho máximo para la sección de proyectos */
-  overflow-y: auto; /* Activa el scroll vertical si es necesario */
+  max-width: 800px;
 }
 
-.proyectos nav {
-  display: flex;
-  flex-wrap: wrap; 
+.imagen-container a {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
 }
 
-.proyectos nav a {
-  display: block;
-  max-width: 200px
-}
-
-.proyectos nav a img {
-  opacity: 1;
-  transition: opacity 0.3s;
-  width: 100%;
-  max-width: 200px;
+.imagen-container img {
+  width: 100px;
   height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.3s, transform 0.3s;
   border: 3px solid transparent;
 }
 
-.proyectos nav a:hover img {
-  opacity: 0.3;
-  transform: translateY(-10px); /* Desplaza la imagen hacia arriba al pasar el mouse */
+/* Segunda fila centrada con 3 imágenes */
+.imagen-container {
+  grid-template-rows: auto auto; /* Dos filas */
 }
 
+.imagen-container a:nth-child(5),
+.imagen-container a:nth-child(6),
+.imagen-container a:nth-child(7) {
+  grid-column: span 1; /* Cada imagen ocupa una columna */
+  justify-self: center;
+}
+
+.imagen-container a:nth-child(5) {
+  grid-column-start: 2; /* Coloca la primera imagen de la segunda fila en la segunda columna para centrar */
+}
+
+.imagen-container a:nth-child(6) {
+  grid-column-start: 3; /* Coloca la segunda imagen de la segunda fila en la tercera columna */
+}
+
+.imagen-container a:nth-child(7) {
+  grid-column-start: 4; /* Coloca la tercera imagen de la segunda fila en la cuarta columna */
+}
+
+.imagen-container a:hover img {
+  opacity: 0.3;
+  transform: translateY(-10px);
+}
+
+/* Estilo para el botón */
 button {
   border-radius: 20px;
   padding: 10px 20px;
@@ -99,17 +118,17 @@ button:hover {
 
 @media (max-width: 1200px) {
   main {
-    padding: 0 10px; /* Ajusta los márgenes laterales para pantallas medianas */
+    padding: 0 10px;
   }
 }
 
 @media (max-width: 900px) {
-  .proyectos {
+  .imagen-container {
     grid-template-columns: 1fr;
   }
 
   button {
-    font-size: 12px; /* Tamaño de fuente más pequeño para botones */
-    padding: 8px 16px; /* Ajusta el padding del botón */
+    font-size: 12px;
+    padding: 8px 16px;
   }
 }
